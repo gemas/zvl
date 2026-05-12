@@ -1,0 +1,76 @@
+/* Algemene instellingen voor de navigatie en inhoud */
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.activities-section {
+    padding: 2rem 0;
+    background: #f8f9fa;
+}
+
+.activities-section h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #0a154c;
+    margin-bottom: 3rem;
+    margin-top: 1rem;}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* altijd 3 kolommen */
+    gap: 1.5rem;
+}
+
+
+.activity-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    border-left: 6px solid #0080c6; /* Blauwe accentlijn */
+    
+
+}
+
+.activity-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.activity-content h3 {
+    margin: 0.8rem 0 0.5rem;
+    color: #0a154c;
+}
+
+.activity-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+
+@media (max-width: 1024px) {
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr); /* tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .activities-grid {
+        grid-template-columns: 1fr; /* mobiel */
+    }
+}

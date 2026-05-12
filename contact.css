@@ -1,0 +1,74 @@
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.contact {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    color: #333;
+    margin-bottom: 0 !important;
+}
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -0.75rem;
+    font-size: 2.5rem;
+    color: #0a154c;
+    font-family: "DM Sans", sans-serif;
+}
+
+.contact-tekst {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem; /* Verhoogt de leesbaarheid */
+    line-height: 1.6; /* Maakt de tekst prettiger leesbaar */
+    margin: 3rem 0; /* Ruimte tussen de paragrafen */
+    color: #333; /* Neutrale donkere kleur */
+}
+
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input[type="tel"] {
+    font-family: inherit;
+    color: #333;
+}
+
+.contact-form button {
+    background-color: #0080c6; /* Primaire kleur */
+    color: white; /* Tekstkleur */
+    padding: 0.8rem 1.5rem; /* Ruimte rond de tekst */
+    font-size: 1rem;
+    font-weight: normal;
+    border-radius: 8px; /* Ronde hoeken */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
+    border: none; /* Geen rand */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw */
+}
+
+.contact-form button:hover {
+    background-color: #005fa3; /* Donkerdere kleur bij hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Vergroot de schaduw bij hover */
+}
+
+

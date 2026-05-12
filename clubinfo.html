@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Over ons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="clubinfo.css">
+    <script src="clubinfo.js"></script>
+    <script src="index.js" defer></script>
+
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Assets/Logo2ZVL(web).png" alt="Logo Zwemvereniging Lanaken" class="logo-image">
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="Assets/hamburger menu fr.png" alt="Hamburger Menu" class="hamburger-icon">
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="clubinfo.html" class="active">Clubinfo</a></li>
+                <li><a href="zwemmen.html">Zwemmen</a></li>
+                <li><a href="nieuws.html">Nieuws</a></li>
+                <li><a href="clubactiviteiten.html">Clubactiviteiten</a></li>
+                <!--<li><a href="shop.html">Shop</a></li>-->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!--<div class="nav-extras">
+                <button class="login-button">
+                    <img src="Assets/account.png" alt="Account Icon" class="login-icon" />
+                    Inloggen
+                </button>
+            </div> -->
+        </nav>
+    </div>
+</header>
+
+<!-- Modaal venster voor Inloggen / Registreren -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <button class="close">&times;</button>
+        <h2>Inloggen</h2>
+        <div id="loginForm">
+            <form>
+                <label for="username">Gebruikersnaam:</label>
+                <input type="text" id="username" name="username" placeholder="Gebruikersnaam" required>
+
+                <label for="password">Wachtwoord:</label>
+                <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+
+                <button type="submit">Inloggen</button>
+            </form>
+            <p>Nog geen account? <a href="#" id="registerLink">Registreer hier</a>.</p>
+        </div>
+        <div id="registerForm" style="display: none;">
+            <form>
+                <label for="regUsername">Gebruikersnaam:</label>
+                <input type="text" id="regUsername" name="regUsername" placeholder="Gebruikersnaam" required>
+
+                <label for="regEmail">E-mail:</label>
+                <input type="email" id="regEmail" name="regEmail" placeholder="E-mail" required>
+
+                <label for="regPassword">Wachtwoord:</label>
+                <input type="password" id="regPassword" name="regPassword" placeholder="Wachtwoord" required>
+
+                <label for="regPasswordConfirm">Bevestig Wachtwoord:</label>
+                <input type="password" id="regPasswordConfirm" name="regPasswordConfirm" placeholder="Bevestig Wachtwoord" required>
+
+                <button type="submit">Registreer</button>
+            </form>
+            <p>Heb je al een account? <a href="#" id="loginLink">Log hier in</a>.</p>
+        </div>
+    </div>
+</div>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>Club Info</h2>
+        <section id="missie" class="missie">
+            <div class="container">
+                <div class="missie-content">
+                    <div class="missie-image">
+                        <img src="Assets/pexels-juli-ane-351889530-31049377.jpg" height="4000" width="6000" alt="Missie Afbeelding"/>
+                    </div>
+                    <div class="missie-text">
+                        <p>
+                            <strong class="large-title">Borstcrawl Academie</strong>
+                            <br />
+                            De ultieme training voor langeafstandzwemmers die hun techniek willen perfectioneren en hun prestaties naar een hoger niveau willen tillen!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="story">
+            <h3>Onze Geschiedenis</h3>
+            <p>
+                Sinds 2022 waren we met een aantal triatleten op zoek naar een zwemcoach die ons kon begeleiden voor het zwemonderdeel van de triatlon. Zeker omdat het zwemmen in ‘open water’ best wel inspannend is.
+                Gelukkig was de toenmalige redder van het zwembad in de SportOase, Delphine Jaques, bereid om ons te begeleiden. Delphine is immers een voormalig Belgische zwemkampioene en met haar opgedane wedstrijdervaring is zij heel goed in staat om ons de fijne kneepjes van de zwemtechniek bij te brengen.
+            </p>
+            <p>
+                We zijn sinds september 2022 onder haar leiding gestart met wekelijkse trainingen, waarbij we de borstcrawl-techniek steeds beter onder de knie kregen. Dat vertaalde zich al snel in betere zwemtijden in de verschillende afstanden van de triatlons. De oorspronkelijke groep groeide snel, niet alleen met triatleten maar ook met zwemmers die recreatief langere afstanden willen zwemmen.
+            </p>
+            <p>
+                Na wat zoeken naar beschikbare zwembanen groeide het aantal zwemmers gestaag naar een 30-tal zwemmers in de verschillende disciplines, waardoor het zo langzamerhand tijd werd om in de groep meer structuur aan te brengen. Sinds 1 maart 2025 is daarom een vzw opgericht onder de naam van Zwemvereniging Lanaken (afgekort als ZVL) en wordt de aansluiting bij een federale sportorganisatie gezocht.
+            </p>
+            <p>
+                Tot onze grote spijt moest helaas onze trainster Delphine eind 2024 naar de andere kant van het land verhuizen. Andy Wuyts heeft haar een tijdje opgevolgd, maar deze moest helaas verstek geven i.v.m. ziekte. De trainingen worden nu begeleid door coaches die door het Nederlandse professionele triathlonbegeleidingsbedrijf van Edwin Dasselaar aangestuurd worden met behulp van trainingsschema’s en specifieke technische zwemoefeningen.
+            </p>
+        </div>
+    </div>
+</section>
+
+        <!-- Team Introductie -->
+        <div class="team">
+            <h2>Ons Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="Assets/WhatsApp Image 2025-05-09 at 10.23.55.jpeg" alt="Coach" class="team-image">
+                    <h4>Peter</h4>
+                    <p>Voorzitter</p>
+                </div>
+                <div class="team-member">
+                    <img src="Assets/WhatsApp Image 2025-05-08 at 15.23.28.jpeg" alt="Assistent Coach" class="team-image">
+                    <h4>Johan</h4>
+                    <p>Secretaris</p>
+                </div>
+                <div class="team-member">
+                    <img src="Assets/IconM-1.png" alt="Administratie" class="team-image">
+                    <h4>Edwin (TriEd Coaching)</h4>
+                    <p>Coördinatie training</p>
+                </div>
+                <div class="team-member">
+                    <img src="Assets/Sam.jpeg" alt="Administratie" class="team-image">
+                    <h4>Sam</h4>
+                    <p>Coach</p>
+                </div>
+                <div class="team-member">
+                    <img src="Assets/Raoul.jpeg" alt="Administratie" class="team-image">
+                    <h4>Raoul</h4>
+                    <p>Coach</p>
+                </div>
+                <div class="team-member">
+                    <img src="Assets/IconM-1.png" alt="Administratie" class="team-image">
+                    <h4>Harry</h4>
+                    <p>Coördinatie Open Water zwemmen</p>
+                </div>
+                <div class="team-member">
+                    <img src="Assets/WhatsApp Image 2025-05-08 at 15.16.09.jpeg" alt="Administratie" class="team-image">
+                    <h4>Magalie</h4>
+                    <p>Communicatie / Social Media</p>
+                </div>
+            </div>
+        </div>
+
+
+<section id="community" class="community">
+    <div class="container">
+        <h1>Onze Community</h1>
+        <p>Welkom bij de gemeenschap van Zwemvereniging Lanaken! Hier delen we onze mooiste momenten, evenementen, en teamspirit.</p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Assets/WhatsApp Image 2025-04-16 at 19.31.17.jpeg" alt="Teamfoto Zwemvereniging">
+                <p>Ons geweldige team!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Assets/WhatsApp Image 2025-04-16 at 19.37.47.jpeg" alt="Training in het zwembad">
+                <p>Perfecte duiken en nog meer plezier!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Assets/WhatsApp Image 2025-04-16 at 19.42.03.jpeg" alt="Duiken">
+                <p>Trainingssessie vol enthousiasme!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Assets/WhatsApp Image 2025-04-16 at 19.39.40.jpeg" alt="Duiken">
+                <p>Domineer de zwembaan met jouw nieuwe borstcrawlvaardigheden!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Assets/WhatsApp Image 2025-04-16 at 19.41.45.jpeg" alt="Duiken">
+                <p>Elke slag brengt je dichter bij perfectie!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Assets/WhatsApp Image 2025-04-16 at 19.38.14.jpeg" alt="Duiken">
+                <p>Op weg naar master-swimmer!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Assets/WhatsApp Image 2025-04-16 at 19.43.05.jpeg" alt="Duiken">
+                <p>Stap in het water en ontdek de kunst van de borstcrawl!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Assets/Maas.png" alt="Maastricht zwemmen">
+                <p>ThrowDown Crossfit Games Maastricht!</p>
+            </div>
+            <div class="gallery-item">
+            <video src="Assets/WhatsApp Video 2025-07-03 at 13.26.13.mp4" controls autoplay muted></video>
+                <p>Voorbereidende training voor ThrowDown Crossfit Games Maastricht!</p>
+            </div>
+            <div class="gallery-item">
+                <video src="Assets/WhatsApp Video 2025-07-05 at 14.20.41.mp4" controls autoplay muted></video>
+                <p>Impressie van het wateronderdeel Crossfit Games!</p>
+            </div>            <div class="gallery-item">
+                <video src="Assets/WhatsApp Video 2025-07-05 at 14.20.41 (1).mp4" controls autoplay muted></video>
+                <p>Impressie van het wateronderdeel Crossfit Games!</p>
+            </div>
+        </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="sponsors" class="sponsors">
+    <div class="container">
+        <h2>Mede mogelijk gemaakt door</h2>
+        <div class="sponsor-logos">
+            <div class="sponsor">
+                <a href="https://www.instagram.com/conor_van_bemmelen/" target="_blank">
+                    <img src="Assets/Untitled-1 kopie.png" alt="Conor van Bemmelen" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://www.sport.vlaanderen" target="_blank">
+                    <img src="Assets/UTF-8Combinatielogo-Sport-Vlaanderen-vol.png" alt="Sport Vlaanderen" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://christoffelsadvocaten.be" target="_blank">
+                    <img src="Assets/Sapp Logo With Yellow Circle.png" alt="Christoffels Advocaten" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://www.manee-thaimassage.com" target="_blank">
+                    <img src="Assets/Sap Logo With Yellow Circle.png" alt="Manee Thai Massage" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://www.nhpaccountants.be/nl/" target="_blank">
+                    <img src="Assets/Untitled-3.png" alt="NHP Accountants" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+
+                    <img src="Assets/TriEd.jpeg" alt="TriEd" class="sponsor-logo">
+
+            </div>
+            <div class="sponsor">
+                <a href="https://www.crossfitbatteraof.nl" target="_blank">
+                    <img src="Assets/Untitled-1.png" alt="CrossFit Batteraof" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://www.mallorcacycling.nl/nl/" target="_blank">
+                    <img src="Assets/CMC-logo.png" alt="Mallorca Cycling" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://eyeswim.nl" target="_blank">
+                    <img src="Assets/Logo-landscape.jpg" alt="Eye swim" class="sponsor-logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo Sectie -->
+        <div class="footer-logo">
+            <img src="Assets/Logo2ZVL(web).png" alt="Logo" class="footer-logo-image" />
+            <p>Je favoriete club, altijd dichtbij!</p>
+        </div>
+
+        <!-- Navigatie Sectie -->
+        <div class="footer-links">
+            <h4>Navigatie</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clubinfo.html">Clubinfo</a></li>
+                <li><a href="zwemmen.html">Zwemmen</a></li>
+                <li><a href="nieuws.html">Nieuws</a></li>
+                <li><a href="clubactiviteiten.html">Clubactiviteiten</a></li>
+                <!-- <li><a href="shop.html">Shop</a></li>-->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacybeleid.html">Privacybeleid</a></li>
+            </ul>
+        </div>
+
+        <!-- Sociale Media Sectie -->
+        <div class="footer-socials">
+            <h4>Volg ons</h4>
+            <ul>
+                <li><a href="https://www.facebook.com/people/Zwemvereniging-Lanaken/61579171171274/?mibextid=wwXIfr&rdid=x8otZnBHdOwVlhb2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FmjApGy12%2F%3Fmibextid%3DwwXIfr" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/zwemvereniginglanaken/" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Informatie -->
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: zwemlanaken@gmail.com</p>
+            <p>Adres: Montaigneweg 1, 3620 Lanaken</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Zwemvereniging Lanaken. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+
+</body>
+</html>

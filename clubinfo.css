@@ -1,0 +1,595 @@
+/* Algemene stijlen */
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Verberg horizontale scrollbalk */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+
+}
+
+/* Header en navigatie */
+.header {
+    background: linear-gradient(to right, #0a154c, #0080c6);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-end; /* Onderkant van logo en navigatie uitlijnen */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto -14px auto;
+    padding: 0 20px;
+}
+
+.logo-image {
+    height: 90px; /* Consistente hoogte van het logo */
+    width: auto;
+    flex-shrink: 0;
+    transform: translateY(-5px); /* Logo iets omhoog plaatsen */
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Meer ruimte tussen links */
+    list-style: none;
+    font-size: large;
+    margin: 0;
+    padding: 0 0 4px 0;
+    align-items: flex-end; /* Onderkant uitlijnen van links binnen de navigatie */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.2; /* Zorgt voor consistente hoogte */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-extras {
+    display: flex;
+    align-items: center; /* Knoppen verticaal centreren */
+    gap: 20px;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    margin: 3rem auto;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Missie Sectie */
+.missie {
+    padding: 1rem 1rem; /* Verminder de padding om de ruimte tussen inhoud en rand kleiner te maken */
+    background: linear-gradient(135deg, #f5f7fb, #e4e9f2); /* Gradient-achtergrond */
+    border: 1px solid #dfe3ea; /* Dunne rand */
+    border-radius: 16px; /* Meer afgeronde hoeken voor een modernere uitstraling */
+    margin: 3rem auto 8rem auto; /* Originele marge boven en onder */
+    max-width: 900px; /* Beperk de breedte voor betere leesbaarheid */
+    box-shadow: 0 8px 12px rgba(0, 128, 198, 0.15); /* Schaduw voor diepte */
+    text-align: left; /* Zorgt voor een nette uitlijning van de tekst */
+    font-family: Arial, sans-serif; /* Gebruik van een modern lettertype */
+    font-size: 1rem; /* Zorgt voor een leesbare tekstgrootte */
+    color: #333; /* Donkere kleur voor tekst */
+    line-height: 1.8; /* Verhoog de leesbaarheid door meer ruimte tussen regels */
+    font-weight: 550;
+}
+
+
+.large-title {
+    font-size: 2rem; /* Maak de tekst groot */
+    font-weight: bold; /* Vetgedrukt */
+    line-height: 1.5; /* Ruimte tussen regels */
+}
+
+
+.missie p {
+    margin-top: 0.5rem; /* Kleinere marge boven de paragraaf om het in lijn te brengen met de afbeelding */
+    margin-bottom: 1rem; /* Ruimte onder de paragraaf */
+    letter-spacing: 0.5px;
+}
+
+.missie-content {
+    display: flex;
+    flex-direction: column; /* Standaard alles onder elkaar */
+    align-items: center;
+}
+
+.missie-image img {
+    width: 100%; /* Zorgt ervoor dat de afbeelding de volledige breedte van de container inneemt */
+    max-width: 500px; /* Maximaliseer de breedte van de afbeelding */
+    height: auto; /* Houdt de verhoudingen van de afbeelding intact */
+    border-radius: 8px; /* Afgeronde hoeken voor de afbeelding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw om de afbeelding te laten uitsteken */
+}
+
+.missie-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat de tekst verticaal wordt uitgelijnd */
+    justify-content: center; /* Centreert de tekst verticaal ten opzichte van de afbeelding */
+    margin-top: 1.5rem;
+}
+
+
+.missie-text p {
+    font-size: 1.2rem; /* Grotere tekst voor de missie beschrijving */
+    color: #555; /* Donkere grijze kleur voor de paragraaf tekst */
+    line-height: 1.6; /* Ruimere regels voor betere leesbaarheid */
+}
+
+.missie-text h2 {
+    font-size: 2.5rem; /* Grote koptekst voor de missie tekst */
+    color: #0a154c; /* Donkere kleur voor de tekst */
+    margin-top: 0.5rem; /* Ruimte boven de koptekst om te zorgen dat het uitlijnt met de afbeelding */
+    margin-bottom: 1rem; /* Ruimte onder de koptekst */
+    font-family: "DM Sans", sans-serif; /* Lettertype voor de koptekst */
+    display: flex; /* Gebruik flexbox om de tekst in één lijn te krijgen */
+    align-items: center; /* Zorgt ervoor dat de tekst gecentreerd is verticaal */
+}
+
+.missie-text p span {
+    margin-right: 0.5rem; /* Ruimte tussen de woorden "de ultieme" en "training voor" */
+}
+
+
+
+/* Over Ons Sectie */
+.about h2 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.about p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.about-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-text {
+    width: 45%;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h3 {
+    color: #0a154c;
+    margin-bottom: 1.5rem;
+}
+
+/* Media Queries voor Responsiviteit */
+@media (max-width: 768px) {
+
+
+
+    .about-info {
+        flex-direction: column; /* Zet items onder elkaar */
+    }
+
+    .about-text {
+        width: 100%; /* Volledige breedte op kleinere schermen */
+        flex: 1 1 auto; /* Flexibel aanpassen */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about-text {
+        padding: 1.5rem; /* Verklein padding voor kleinere schermen */
+    }
+}
+
+/* Team Sectie */
+.team {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: Arial, sans-serif;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.team-member {
+    text-align: center;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team h2{
+    font-size: 2.5rem;
+    color: #0a154c;
+    margin: 3rem auto;
+    font-family: "DM Sans", sans-serif;
+}
+
+.team-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-position: 80% 20%;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* Verhaal van Zwemvereniging Lanaken */
+.story h3 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.story p {
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px)  {
+.story p {
+font-size: 1rem;}
+}
+
+
+
+/* Community */
+.community {
+    padding: 4rem 0;
+    background: #ffffff;
+    text-align: center;
+    margin-bottom: 0 ;
+}
+
+.community h1 {
+    font-size: 3rem;
+    color: #0a154c;
+    margin-bottom: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.community p {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 2.5rem;
+}
+
+/* Foto Galerij */
+.gallery {
+    display: flex; /* Flexbox in plaats van grid */
+    gap: 2.5rem; /* Houd de ruimte tussen items */
+    overflow-x: auto; /* Maak horizontaal scrollen mogelijk */
+    padding: 1rem 0; /* Extra padding voor een mooie lay-out */
+    scroll-snap-type: x mandatory; /* Zorgt voor vloeiend scrollen */
+}
+
+.gallery-item {
+    flex: 0 0 250px; /* Zorg dat elk item een vaste breedte heeft */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: center; /* Snapt elk item naar het midden bij scrollen */
+}
+
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item p {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem;
+}
+
+
+/* Schaduw tussen secties */
+.section-divider {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin-top: 0;
+}
+
+/* Sponsors Sectie */
+.sponsors {
+    padding: 4rem 1rem;
+    background: #f9f9f9;
+    text-align: center;
+    margin-bottom: 0;
+    overflow-x: hidden; /* Verberg horizontale scroll indien nodig */
+}
+
+.sponsors h2 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.sponsor-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 logo's per rij */
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor:nth-child(n+4) {
+    grid-column: auto; /* Laat de laatste twee naast elkaar */
+}
+
+
+.sponsor {
+    text-align: center;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+
+}
+
+.sponsor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sponsor-logo {
+    height: 130px; /* Stel de vaste hoogte in */
+    width: auto; /* Breedte past zich aan op basis van de hoogte */
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    object-fit: contain; /* Zorgt ervoor dat het logo binnen de container blijft */
+}
+
+
+/* Responsieve aanpassingen */
+@media (max-width: 1040px) {
+    .sponsor-logos {
+        grid-template-columns: repeat(2, 1fr); /* 2 logo's per rij op tablets */
+    }
+}
+
+@media (max-width: 880px) {
+    .sponsor-logos {
+        grid-template-columns: 1fr; /* 1 logo per rij op telefoons */
+    }
+}
+
+/* Basisstijlen voor de navigatie */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    margin: 6px 25px
+}
+
+.hamburger-icon {
+    width: 24px; /* Pas aan naar wens */
+    height: auto;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Stijlen voor kleinere schermen (hamburger menu) */
+@media (max-width: 940px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0a154c;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+
+
+    .nav-links.active {
+        background: #0a154c; /* Zorgt voor een schermvullende achtergrondkleur */
+        transition: opacity 0.3s ease-in-out; /* Voeg een vloeiende overgang toe */
+    }
+}
+
+
+/* Stijlen voor grotere schermen */
+@media (min-width: 1024px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 880px) {
+    .nav-toggle {
+        display: block;
+
+    }}
+
+/* Responsiviteit */
+@media (min-width: 768px) {
+    .missie-content {
+        display: flex; /* Flexbox-layout */
+        flex-direction: row; /* Zet tekst en afbeelding naast elkaar */
+        justify-content: space-between; /* Verspreid inhoud over de beschikbare ruimte */
+        gap: 2rem; /* Voeg ruimte toe tussen de elementen */
+    }
+
+    .missie-text {
+        width: 50%; /* Tekst krijgt de helft van de breedte */
+        text-align: left; /* Tekst uitlijnen naar links */
+    }
+
+
+    .missie-image {
+        width: 50%; /* Afbeelding krijgt de andere helft van de breedte */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .large-title {
+        margin-top: 1rem;
+    }
+    .missie-content {
+        display: flex; /* Zorg ervoor dat de flexbox actief blijft */
+        flex-direction: column-reverse; /* Afbeelding komt onder de tekst */
+        align-items: center; /* Gecentreerd uitlijnen */
+        text-align: center; /* Tekst centreren */
+    }
+
+    .missie-text {
+        width: 100%; /* Tekst neemt volledige breedte */
+        text-align: center; /* Tekst centreren */
+    }
+
+    .missie-image img {
+        margin-top: 1.5rem; /* Extra ruimte tussen tekst en afbeelding */
+        width: 90%; /* Afbeelding schaalt naar 90% van de containerbreedte */
+        max-width: 500px; /* Maximaal 500px breed */
+        height: auto; /* Houdt verhoudingen intact */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .large-title {
+        margin-top: 10rem;
+    }
+    .missie-content {
+        flex-direction: column-reverse; /* Plaats afbeelding onder de tekst */
+    }
+.missie {
+    padding-top: 0;
+}
+    .missie-text {
+        text-align: center;
+    }
+
+
+    .missie-image img {
+        margin-bottom: 1.5rem; /* Extra ruimte tussen tekst en afbeelding */
+    }
+    .logo-image {
+        height: 5rem;
+        width: auto;
+        margin-left: -2rem;
+    }
+}

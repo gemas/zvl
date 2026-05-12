@@ -1,0 +1,470 @@
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Algemene stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header en navigatie */
+.header {
+    background: linear-gradient(to right, #0a154c, #0080c6);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-end; /* Onderkant van logo en navigatie uitlijnen */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto -14px auto;
+    padding: 0 20px;
+}
+
+.logo-image {
+    height: 90px; /* Consistente hoogte van het logo */
+    width: auto;
+    flex-shrink: 0;
+    transform: translateY(-5px); /* Logo iets omhoog plaatsen */
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Meer ruimte tussen links */
+    list-style: none;
+    font-size: large;
+    margin: 0;
+    padding: 0 0 4px 0;
+    align-items: flex-end; /* Onderkant uitlijnen van links binnen de navigatie */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.2; /* Zorgt voor consistente hoogte */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-extras {
+    display: flex;
+    align-items: center; /* Knoppen verticaal centreren */
+    gap: 20px;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0080c6;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    transition: background-color 0.3s ease;
+}
+
+.login-button img {
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 0.5em;
+}
+
+.login-button:hover {
+    background-color: #005a99;
+}
+
+/* Modal achtergrond */
+.modal {
+    display: none; /* Standaard verborgen */
+    position: fixed;
+    z-index: 9999; /* Zet modal boven alles */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 21, 76, 0.7); /* Donkere overlay */
+    backdrop-filter: blur(5px); /* Subtiele vervaging */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    pointer-events: all; /* Zorg dat modal interactief is */
+}
+
+
+/* Modal inhoud */
+.modal-content {
+    background: linear-gradient(to bottom, #ffffff, #e0f3ff); /* Zachte gradient */
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Schaduw consistent met kaarten */
+    text-align: center;
+    color: #0a154c;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Sluitknop */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #0a154c;
+}
+
+/* Titel van de modal */
+.modal-content h2 {
+    font-size: 2rem;
+    color: #0a154c;
+    margin-bottom: 15px;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Invoervelden */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 128, 198, 0.5);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Submit knop */
+.modal-content button {
+    background-color: #0080c6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+    background-color: #005a99;
+    transform: scale(1.05);
+}
+
+/* Subtekst of links */
+.modal-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Stijl voor invoervelden, inclusief e-mail */
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 128, 198, 0.5);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.shop {
+    padding: 3rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.shop h2 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    margin-bottom: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+
+.shop p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Zoekbalk en filter */
+.shop-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#search-bar {
+    padding: 0.8rem;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#category-filter {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.product-card .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #0080c6;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw */
+    cursor: pointer;
+}
+
+.product-card .btn-primary:hover {
+    background-color: #005fa3;
+}
+
+
+
+/* Footer algemene stijl */
+.footer {
+    background: #0a154c;
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo-image {
+    width: 220px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.footer-links,
+.footer-socials,
+.footer-contact {
+    text-align: left;
+}
+
+.footer-links h4,
+.footer-socials h4,
+.footer-contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+}
+
+.footer-links ul,
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-socials ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a,
+.footer-socials ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-socials ul li a:hover {
+    color: #fff;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Footer onderaan */
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+    color: #aaa;
+}
+
+/* Responsieve stijlen voor mobiele weergave */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0a154c;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        background: white;
+        display: block;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: white;
+        position: absolute;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        top: 8px;
+    }}

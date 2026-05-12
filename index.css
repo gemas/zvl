@@ -1,0 +1,1057 @@
+/* Algemene stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header en navigatie */
+.header {
+    background: linear-gradient(to right, #0a154c, #0080c6);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-end; /* Onderkant van logo en navigatie uitlijnen */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto -14px auto;
+    padding: 0 20px;
+}
+
+.logo-image {
+    height: 90px; /* Consistente hoogte van het logo */
+    width: auto;
+    flex-shrink: 0;
+    transform: translateY(-5px); /* Logo iets omhoog plaatsen */
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Meer ruimte tussen links */
+    list-style: none;
+    font-size: large;
+    margin: 0;
+    padding: 0 0 4px 0;
+    align-items: flex-end; /* Onderkant uitlijnen van links binnen de navigatie */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.2; /* Zorgt voor consistente hoogte */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-extras {
+    display: flex;
+    align-items: center; /* Knoppen verticaal centreren */
+    gap: 20px;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0080c6;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    transition: background-color 0.3s ease;
+}
+
+.login-button img {
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 0.5em;
+}
+
+.login-button:hover {
+    background-color: #005a99;
+}
+
+/* Modal achtergrond */
+.modal {
+    display: none; /* Standaard verborgen */
+    position: fixed;
+    z-index: 9999; /* Zet modal boven alles */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 21, 76, 0.7); /* Donkere overlay */
+    backdrop-filter: blur(5px); /* Subtiele vervaging */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    pointer-events: all; /* Zorg dat modal interactief is */
+}
+
+
+/* Modal inhoud */
+.modal-content {
+    background: linear-gradient(to bottom, #ffffff, #e0f3ff); /* Zachte gradient */
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Schaduw consistent met kaarten */
+    text-align: center;
+    color: #0a154c;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Sluitknop */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #0a154c;
+}
+
+/* Titel van de modal */
+.modal-content h2 {
+    font-size: 2rem;
+    color: #0a154c;
+    margin-bottom: 15px;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Invoervelden */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 128, 198, 0.5);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Submit knop */
+.modal-content button {
+    background-color: #0080c6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+    background-color: #005a99;
+    transform: scale(1.05);
+}
+
+/* Subtekst of links */
+.modal-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Stijl voor invoervelden, inclusief e-mail */
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 128, 198, 0.5);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* Hero-sectie */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70vh;
+    padding: 40px 20px;
+    background: linear-gradient(to right, rgba(10, 21, 76, 0.7), rgba(0, 128, 198, 0.7)), url('Assets/pexels-pixabay-261403.jpg'); /* Gradiënt door de afbeelding heen */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+/* Verwijder de overlay als je enkel een subtiele gradiënt wilt zonder extra verduistering */
+.hero .container {
+    position: relative;
+    z-index: 2; /* Zorgt ervoor dat de tekst bovenop de afbeelding wordt weergegeven */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn-primary {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #0080c6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn-primary:hover {
+    background-color: #0080c6;
+    color: white;
+}
+
+/* Algemene knoppen */
+.btn-primary {
+    display: inline-block;
+    background: #0080c6;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw */
+}
+
+.btn-primary:hover {
+    background: #004a99;
+}
+
+
+/* Stijl voor de cookie-banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 620px;
+    background: #222;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    z-index: 9999;
+    display: none; /* Standaard verbergen */
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Stijl voor de boodschap */
+.cookie-message {
+    flex: 1 1 300px;
+    line-height: 1.5;
+}
+
+/* Stijl voor de knoppen */
+.cookie-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cookie-button {
+    padding: 10px 18px;
+    cursor: pointer;
+    background-color: #0080c6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.cookie-button:hover {
+    background-color: #004a99;
+}
+
+/* Privacy link */
+.privacy-link {
+    color: #0080c6;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: #004a99;
+    text-decoration: underline;
+}
+
+
+
+/* Aanpassingen voor schermbreedtes tussen 470px en 740px */
+@media (min-width: 470px) and (max-width: 740px) {
+    .cookie-banner {
+        max-width: 85%; /* Zorg ervoor dat de banner niet te breed is */
+        padding: 15px; /* Behoud voldoende ruimte rondom de tekst */
+        gap: 15px;
+    }
+
+    .cookie-message {
+        text-align: center; /* Zorg dat de tekst gecentreerd is */
+        font-size: 0.95rem; /* Iets kleinere tekst om ruimte te besparen */
+        line-height: 1.4; /* Goede leesbaarheid */
+    }
+
+    .cookie-actions {
+        justify-content: center; /* Knoppen netjes centreren */
+        gap: 10px; /* Minder ruimte tussen knoppen */
+    }
+
+    .cookie-button {
+        font-size: 0.95rem; /* Knoptekst schaalbaar houden */
+        padding: 8px 12px; /* Minder padding voor consistentie */
+    }
+
+    .privacy-link {
+        font-size: 0.85rem; /* Link past beter bij de kleinere tekst */
+    }
+}
+
+
+/* Mobiele schermen */
+@media (max-width: 480px) {
+    .cookie-banner {
+        flex-direction: column;
+        max-width: 95%;
+        padding: 10px;
+        bottom: 10px;
+        margin: 0 auto;
+    }
+
+    .cookie-message {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-bottom: -170px;
+    }
+
+    .cookie-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cookie-button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .privacy-link {
+        font-size: 0.9rem;
+    }
+}
+
+#cookie-banner {
+    display: none;
+    /* andere styling blijft hetzelfde */
+}
+
+#cookie-banner.show {
+    display: flex;
+}
+
+
+
+/* Zwemmen Sectie */
+.swimming {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #e6f7ff, #ffffff);
+    text-align: center;
+    margin: 60px 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 0px;
+}
+
+.swimming h2 {
+    font-size: 3rem;
+    color: #0a154c;
+    margin-bottom: 2rem;
+    font-family: "DM Sans", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.swimming p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swimming-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.swimming-card {
+    background: #ffffff ;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 128, 198, 0.2);
+}
+
+
+
+.swimming-card h3 {
+    font-size: 1.8rem;
+    color: #0a154c;
+    margin-bottom: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.swimming-card p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.swimming-card .btn-primary {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    background-color: #0080c6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    margin-top: 4rem;
+}
+
+.swimming-card .btn-primary:hover {
+    background-color: #005a99;
+    transform: scale(1.1);
+}
+
+/* Abstracte decoratie */
+.swimming::before {
+    content: '';
+    position: absolute;
+    top: 11%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background: #0080c6;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.8;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.swimming::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    background: #0a154c;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.8;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Schaduw tussen secties */
+.section-divider {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin-top: -5px;
+}
+
+
+
+/* Secties */
+.about, .services, .community, .contact, .shop, .location {
+    background-color: #fff; /* Zorgt voor dezelfde achtergrondkleur */
+    margin-bottom: 40px; /* Zorgt voor consistentie in de ruimte tussen secties */
+    border-radius: 8px; /* Zorgt voor afgeronde hoeken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Zelfde schaduw */
+}
+
+.section-title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.5rem; /* Pas dit aan afhankelijk van de gewenste grootte */
+    color: #0a154c; /* Optioneel: kleurconsistentie met andere sectietitels */
+    text-align: center; /* Zorg ervoor dat het gecentreerd is */
+    margin-bottom: 1.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.community {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.community h2 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    margin-bottom: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.community p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+.community-carousel {
+    display: flex;
+    justify-content: center; /* Zorg ervoor dat de items gecentreerd worden */
+    gap: 1rem;
+    padding: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* Zorg ervoor dat het scrolt naar het midden */
+    scroll-padding-left: 50%; /* Zorgt ervoor dat de eerste afbeelding naar het midden schuift */
+    scroll-padding-right: 50%; /* Zorg ervoor dat de laatste afbeelding ook in beeld is */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: center; /* Zorg ervoor dat de afbeeldingen naar het midden 'snappen' */
+}
+
+.community-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+    .section-title, .community h2 {
+        font-size: 2rem;
+    }
+
+    .community p {
+        font-size: 1rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .carousel-item {
+        width: 80%;
+        flex: 0 0 250px;
+    }
+
+    .community-carousel {
+        padding: 0 0.5rem;
+        scroll-padding-left: 0; /* Geen extra ruimte aan de linkerkant bij mobiele schermen */
+        scroll-padding-right: 0; /* Geen extra ruimte aan de rechterkant bij mobiele schermen */
+        justify-content: flex-start; /* Begin bij de eerste afbeelding */
+    }
+}
+/* Shop Sectie */
+.shop {
+    padding: 4rem 0;
+    background: #ffffff;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.shop h2 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    margin-bottom: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.shop p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #555;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.product-card .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #0080c6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Ligging Zwembad */
+.location {
+    padding: 4rem 0;
+    background: #f9f9f9;
+    text-align: center;
+    margin: 40px 0 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.location h2 {
+    font-size: 2.5rem;
+    color: #0a154c;
+    margin-bottom: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.location p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.location address {
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.map-container iframe {
+    display: block; /* Verwijdert eventuele inline marges */
+    width: 100%; /* Zorgt ervoor dat de iframe de breedte van de container inneemt */
+    height: 400px; /* Stel een vaste hoogte in */
+    border: none; /* Verwijder de rand van het iframe */
+    margin: 0; /* Verwijder marges rondom het iframe */
+    padding: 0; /* Verwijder padding binnen het iframe */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+#cookieConsent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.cookie-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#acceptCookies {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#acceptCookies:hover {
+    background-color: #45a049;
+}
+
+
+/* Footer algemene stijl */
+.footer {
+    background: #0a154c;
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo-image {
+    width: 220px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.footer-links,
+.footer-socials,
+.footer-contact {
+    text-align: left;
+}
+
+.footer-links h4,
+.footer-socials h4,
+.footer-contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+}
+
+.footer-links ul,
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-socials ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a,
+.footer-socials ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-socials ul li a:hover {
+    color: #fff;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Footer onderaan */
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+    color: #aaa;
+}
+
+
+
+
+/* Basisstijlen voor de navigatie */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    margin: 6px 25px
+}
+
+.hamburger-icon {
+    width: 24px; /* Pas aan naar wens */
+    height: auto;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Stijlen voor kleinere schermen (hamburger menu) */
+@media (max-width: 940px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0a154c;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+
+
+    .nav-links.active {
+        background: #0a154c; /* Zorgt voor een schermvullende achtergrondkleur */
+        transition: opacity 0.3s ease-in-out; /* Voeg een vloeiende overgang toe */
+    }
+}
+
+
+/* Stijlen voor grotere schermen */
+@media (min-width: 1024px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 880px) {
+    .nav-toggle {
+        display: block;
+
+    }}
+
+/* Extra stijlen voor responsiviteit en inhoud */
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.swimming-card {
+    width: calc(50% - 1rem);
+}
+
+@media (max-width: 1024px) {
+    .swimming-card {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .swimming::before,
+    .swimming::after {
+        display: none;
+    }
+
+    .swimming h2 {
+        font-size: 2.2rem;
+    }
+
+    .swimming p {
+        font-size: 1.1rem;
+    }
+
+    .btn-primary {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 880px) {
+    .swimming-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .swimming .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero .btn-primary {
+        margin-top: 0rem;
+    }
+
+    .logo-image {
+        height: 5rem;
+        width: auto;
+        margin-left: -2rem;
+    }
+}

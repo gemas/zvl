@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Zwemvereniging Lanaken</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Assets/Logo2ZVL(web).png" alt="Logo Zwemvereniging Lanaken" class="logo-image">
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="Assets/hamburger menu fr.png" alt="Hamburger Menu" class="hamburger-icon">
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="clubinfo.html">Clubinfo</a></li>
+                <li><a href="zwemmen.html">Zwemmen</a></li>
+                <li><a href="nieuws.html" >Nieuws</a></li>
+                <!--<li><a href="shop.html">Shop</a></li>-->
+                <li><a href="clubactiviteiten.html">Clubactiviteiten</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <!--<div class="nav-extras">
+                <button class="login-button">
+                    <img src="Assets/account.png" alt="Account Icon" class="login-icon" />
+                    Inloggen
+                </button>
+            </div> -->
+        </nav>
+    </div>
+</header>
+
+<!-- Modaal venster voor Inloggen / Registreren -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <button class="close">&times;</button>
+        <h2>Inloggen</h2>
+        <div id="loginForm">
+            <form>
+                <label for="username">Gebruikersnaam:</label>
+                <input type="text" id="username" name="username" placeholder="Gebruikersnaam" required>
+
+                <label for="password">Wachtwoord:</label>
+                <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+
+                <button type="submit">Inloggen</button>
+            </form>
+            <p>Nog geen account? <a href="#" id="registerLink">Registreer hier</a>.</p>
+        </div>
+        <div id="registerForm" style="display: none;">
+            <form>
+                <label for="regUsername">Gebruikersnaam:</label>
+                <input type="text" id="regUsername" name="regUsername" placeholder="Gebruikersnaam" required>
+
+                <label for="regEmail">E-mail:</label>
+                <input type="email" id="regEmail" name="regEmail" placeholder="E-mail" required>
+
+                <label for="regPassword">Wachtwoord:</label>
+                <input type="password" id="regPassword" name="regPassword" placeholder="Wachtwoord" required>
+
+                <label for="regPasswordConfirm">Bevestig Wachtwoord:</label>
+                <input type="password" id="regPasswordConfirm" name="regPasswordConfirm" placeholder="Bevestig Wachtwoord" required>
+
+                <button type="submit">Registreer</button>
+            </form>
+            <p>Heb je al een account? <a href="#" id="loginLink">Log hier in</a>.</p>
+        </div>
+    </div>
+</div>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contacteer Ons</h2>
+        <div class="contact-tekst">
+            <p>Kom eens langs bij een van onze trainingen voor een persoonlijke kennismaking of stuur een mail. </p>
+            <p>Liefst met vermelding wat je persoonlijke doelen en verwachtingen zijn vwb het zwemmen.</p>
+        </div>
+        <form action="#" method="POST" class="contact-form">
+            <label for="name">Voornaam:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="lastname">Achternaam:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefoonnummer:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required  >
+
+            <label for="message">Bericht:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn-primary" onclick="window.location.href='mailto:zwemlanaken@gmail.com'">Verzenden</button>
+        </form>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo Sectie -->
+        <div class="footer-logo">
+            <img src="Assets/Logo2ZVL(web).png" alt="Logo" class="footer-logo-image" />
+            <p>Je favoriete club, altijd dichtbij!</p>
+        </div>
+
+        <!-- Navigatie Sectie -->
+        <div class="footer-links">
+            <h4>Navigatie</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clubinfo.html">Clubinfo</a></li>
+                <li><a href="zwemmen.html">Zwemmen</a></li>
+                <li><a href="nieuws.html">Nieuws</a></li>
+                <li><a href="clubactiviteiten.html">Clubactiviteiten</a></li>
+                <!--<li><a href="shop.html">Shop</a></li>-->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacybeleid.html">Privacybeleid</a></li>
+            </ul>
+        </div>
+
+        <!-- Sociale Media Sectie -->
+        <div class="footer-socials">
+            <h4>Volg ons</h4>
+            <ul>
+                <li><a href="https://www.facebook.com/people/Zwemvereniging-Lanaken/61579171171274/?mibextid=wwXIfr&rdid=x8otZnBHdOwVlhb2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FmjApGy12%2F%3Fmibextid%3DwwXIfr" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/zwemvereniginglanaken/" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Informatie -->
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: zwemlanaken@gmail.com</p>
+            <p>Adres: Montaigneweg 1, 3620 Lanaken</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Zwemvereniging Lanaken. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+
+</body>
+</html>

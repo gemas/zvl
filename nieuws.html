@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Nieuws</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="nieuws.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="nieuws.js" defer></script>
+  <script src="index.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="Assets/Logo2ZVL(web).png" alt="Logo Zwemvereniging Lanaken" class="logo-image">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="Assets/hamburger menu fr.png" alt="Hamburger Menu" class="hamburger-icon">
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="clubinfo.html">Clubinfo</a></li>
+        <li><a href="zwemmen.html">Zwemmen</a></li>
+        <li><a href="nieuws.html" class="active">Nieuws</a></li>
+        <li><a href="clubactiviteiten.html">Clubactiviteiten</a></li>
+        <!--<li><a href="shop.html">Shop</a></li>-->
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!--<div class="nav-extras">
+          <button class="login-button">
+              <img src="Assets/account.png" alt="Account Icon" class="login-icon" />
+              Inloggen
+          </button>
+      </div> -->
+    </nav>
+  </div>
+</header>
+
+<!-- Modaal venster voor Inloggen / Registreren -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <h2>Inloggen</h2>
+    <div id="loginForm">
+      <form>
+        <label for="username">Gebruikersnaam:</label>
+        <input type="text" id="username" name="username" placeholder="Gebruikersnaam" required>
+
+        <label for="password">Wachtwoord:</label>
+        <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+
+        <button type="submit">Inloggen</button>
+      </form>
+      <p>Nog geen account? <a href="#" id="registerLink">Registreer hier</a>.</p>
+    </div>
+    <div id="registerForm" style="display: none;">
+      <form>
+        <label for="regUsername">Gebruikersnaam:</label>
+        <input type="text" id="regUsername" name="regUsername" placeholder="Gebruikersnaam" required>
+
+        <label for="regEmail">E-mail:</label>
+        <input type="email" id="regEmail" name="regEmail" placeholder="E-mail" required>
+
+        <label for="regPassword">Wachtwoord:</label>
+        <input type="password" id="regPassword" name="regPassword" placeholder="Wachtwoord" required>
+
+        <label for="regPasswordConfirm">Bevestig Wachtwoord:</label>
+        <input type="password" id="regPasswordConfirm" name="regPasswordConfirm" placeholder="Bevestig Wachtwoord" required>
+
+        <button type="submit">Registreer</button>
+      </form>
+      <p>Heb je al een account? <a href="#" id="loginLink">Log hier in</a>.</p>
+    </div>
+  </div>
+</div>
+
+<section class="news-section">
+  <div class="container">
+    <h2>Nieuws Artikelen</h2>
+    <div class="news-grid">
+      <article class="news-card">
+        <img src="Assets/Social.jpg" alt="Artikel afbeelding" class="news-image" style="border-radius: 5%;">
+        <div class="news-content">
+          <h3>Zwemvereniging Lanaken breidt uit naar Social Media!
+          </h3>
+          <p class="summary">
+            Zwemvereniging Lanaken is trots om een nieuwe stap in de toekomst te zetten! Naast de officiële erkenning als vzw, zijn we nu ook actief op social media, zodat je altijd en overal op de hoogte kunt blijven van ons laatste nieuws, evenementen en prestaties.
+          </p>
+          <div class="full-text">
+            <p>
+              Volg ons op Instagram en Facebook voor exclusieve foto's, updates over trainingen, en speciale evenementen die we organiseren. Of je nu een trouwe zwemmer bent of een nieuw lid wilt worden, via onze socialmediakanalen krijg je een kijkje achter de schermen en ben je de eerste om te horen over alles wat er speelt binnen onze vereniging.
+            </p>
+            <p>
+              Wij geloven in de kracht van gemeenschap en willen onze passie voor zwemmen met iedereen delen. Door ons te volgen op social media, blijf je niet alleen geïnformeerd, maar maak je ook deel uit van de groeiende Zwemvereniging Lanaken familie. Mis geen enkel moment en volg ons vandaag nog!
+            </p>
+          </div>
+
+          <a href="javascript:void(0);" class="btn-read-more" onclick="toggleReadMore(this)">Lees meer</a>
+
+        </div>
+      </article>
+      <!-- Artikel over Zwemvereniging Lanaken als vzw -->
+      <article class="news-card">
+        <img src="Assets/Logo2ZVL(web).png" alt="Artikel afbeelding" class="news-image">
+        <div class="news-content">
+          <h3>Zwemvereniging Lanaken nu een officiële vzw!</h3>
+          <p class="summary">
+            Zwemvereniging Lanaken is verheugd om te delen dat de club sinds kort officieel is erkend als een vzw.
+            Deze belangrijke mijlpaal opent de deuren naar meer groeimogelijkheden en zorgt ervoor dat we onze doelen
+            en missie op een duurzame manier kunnen voortzetten.
+          </p>
+          <div class="full-text">
+            <p>
+              De weg naar deze erkenning was gevuld met uitdagingen, maar dankzij de inzet van onze vrijwilligers, bestuursleden
+              en leden hebben we dit samen kunnen realiseren. Het officiële vzw-statuut biedt niet alleen structuur, maar ook
+              transparantie en geloofwaardigheid naar sponsors en partners. Dit betekent dat we in de toekomst nog meer
+              mogelijkheden hebben om onze geliefde sport te promoten en onze gemeenschap samen te brengen.
+            </p>
+            <p>
+              Blijf ons volgen voor aankomende evenementen en initiatieven die mogelijk worden dankzij deze nieuwe stap.
+              Samen blijven we groeien, leren en de waarden van zwemmen uitdragen in Lanaken en daarbuiten!
+            </p>
+          </div>
+
+          <a href="javascript:void(0);" class="btn-read-more" onclick="toggleReadMore(this)">Lees meer</a>
+
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Sectie -->
+    <div class="footer-logo">
+      <img src="Assets/Logo2ZVL(web).png" alt="Logo" class="footer-logo-image" />
+      <p>Je favoriete club, altijd dichtbij!</p>
+    </div>
+
+    <!-- Navigatie Sectie -->
+    <div class="footer-links">
+      <h4>Navigatie</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clubinfo.html">Clubinfo</a></li>
+        <li><a href="zwemmen.html">Zwemmen</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="clubactiviteiten.html">Clubactiviteiten</a></li>
+        <!-- <li><a href="shop.html">Shop</a></li>-->
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacybeleid.html">Privacybeleid</a></li>
+      </ul>
+    </div>
+
+    <!-- Sociale Media Sectie -->
+    <div class="footer-socials">
+      <h4>Volg ons</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/people/Zwemvereniging-Lanaken/61579171171274/?mibextid=wwXIfr&rdid=x8otZnBHdOwVlhb2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FmjApGy12%2F%3Fmibextid%3DwwXIfr" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/zwemvereniginglanaken/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Informatie -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: zwemlanaken@gmail.com</p>
+      <p>Adres: Montaigneweg 1, 3620 Lanaken</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Zwemvereniging Lanaken. Alle rechten voorbehouden.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+

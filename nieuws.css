@@ -1,0 +1,188 @@
+/* Algemene instellingen voor de navigatie en inhoud */
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.news-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Zorg ervoor dat de afbeelding en tekst naast elkaar staan */
+    max-height: none; /* Geen beperking voor de hoogte van de card */
+    transition: max-height 0.5s ease;
+    position: relative;
+    margin-bottom: 3rem; /* Verander de margin om een betere lay-out op mobiel te krijgen */
+    padding: 1rem;
+    border-left: 6px solid #0080c6; /* Blauwe accentlijn */
+
+}
+
+.news-image {
+    height: 90px;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding schaalt zonder te vervormen */
+}
+
+.news-content {
+    padding: 0.8rem;
+    width: 60%; /* Zorgt ervoor dat de tekst ruimte heeft naast de afbeelding */
+    flex-grow: 1;
+}
+
+.news-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.news-content p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.news-content .summary {
+    /* De eerste alinea is altijd zichtbaar */
+    display: block;
+}
+
+.full-text {
+    display: none; /* Standaard verborgen tekst */
+    margin-top: 1rem; /* Voeg wat marge toe boven de volledige tekst */
+    max-height: 0; /* Verberg de rest van de tekst */
+    overflow: hidden; /* Verbergt de tekst die niet in de max-height past */
+    transition: max-height 0.5s ease; /* Zachte overgang bij tonen van de tekst */
+}
+
+.full-text.visible {
+    display: block;
+    max-height: 500px; /* Maximale hoogte voor de volledige tekst */
+}
+
+.btn-read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0080c6;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer; /* Verandert de cursor naar een pointer bij hover */
+}
+
+.btn-read-more:hover {
+    text-decoration: underline; /* Onderstreep de knop bij hover */
+}
+
+h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.5rem; /* Pas dit aan afhankelijk van de gewenste grootte */
+    color: #0a154c; /* Optioneel: kleurconsistentie met andere sectietitels */
+    text-align: center; /* Zorg ervoor dat het gecentreerd is */
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+}
+
+.news-section {
+    padding: 1.5rem 0; /* Iets kleinere padding voor meer artikelen */
+}
+
+.news-grid {
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat artikelen onder elkaar staan */
+}
+
+
+.news-card.expanded {
+    max-height: none; /* Verwijder limiet bij uitvouwen */
+}
+
+.btn-read-more {
+    background-color: #0080c6; /* Primaire kleur */
+    color: white; /* Tekstkleur */
+    padding: 0.5rem 1.2rem; /* Ruimte rond de tekst */
+    font-size: 1rem;
+    font-weight: normal;
+    border-radius: 8px; /* Ronde hoeken */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
+    border: none; /* Geen rand */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw */
+}
+
+.btn-read-more:hover {
+    background-color: #005a99;
+}
+
+.news-content .btn-read-more {
+    text-decoration: none !important; /* Forceer de verwijdering van de onderlijning */
+}
+
+.footer {
+    margin-top: 6rem;
+}
+
+
+/* MEDIA QUERY VOOR MOBIEL EN RESPONSIVITEIT */
+
+/* Zorgt ervoor dat de tekst goed leesbaar is op kleinere schermen */
+@media (max-width: 768px) {
+    .news-card {
+        flex-direction: column; /* Zorg ervoor dat de afbeelding en tekst boven elkaar staan op mobiel */
+        padding: 1rem 0.5rem; /* Verminder padding voor mobiele weergave */
+        margin-bottom: 2rem; /* Pas margin aan voor een betere lay-out op mobiel */
+    }
+
+    .news-image {
+        width: 100%; /* Zorg ervoor dat de afbeelding de volle breedte op mobiel neemt */
+        height: auto; /* Laat de hoogte automatisch schalen op basis van de breedte */
+        object-fit: contain; /* Zorg ervoor dat de afbeelding volledig zichtbaar is zonder bijsnijden */
+    }
+
+
+    .news-content {
+        width: 100%; /* Zorg ervoor dat de tekst de volledige breedte op mobiel benut */
+        padding: 0.5rem; /* Verminder padding voor een compactere lay-out */
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr; /* Zorg ervoor dat er maar 1 kolom is op mobiel */
+        gap: 1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Maak de titel kleiner op mobiele apparaten */
+        margin-bottom: 2rem; /* Verminder marge op mobiel voor een compactere lay-out */
+    }
+
+    .btn-read-more {
+        font-size: 0.9rem; /* Maak de knop iets kleiner op mobiel */
+        padding: 0.5rem 1rem; /* Verminder padding voor een compactere knop */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
