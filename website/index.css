@@ -555,7 +555,7 @@ body {
 
 
 /* Secties */
-.about, .services, .community, .contact, .shop, .location {
+.about, .services, .community, .contact, .location {
     background-color: #fff; /* Zorgt voor dezelfde achtergrondkleur */
     margin-bottom: 40px; /* Zorgt voor consistentie in de ruimte tussen secties */
     border-radius: 8px; /* Zorgt voor afgeronde hoeken */
@@ -659,72 +659,6 @@ body {
         scroll-padding-right: 0; /* Geen extra ruimte aan de rechterkant bij mobiele schermen */
         justify-content: flex-start; /* Begin bij de eerste afbeelding */
     }
-}
-/* Shop Sectie */
-.shop {
-    padding: 4rem 0;
-    background: #ffffff;
-    text-align: center;
-    margin: 40px 0;
-}
-
-.shop h2 {
-    font-size: 2.5rem;
-    color: #0a154c;
-    margin-bottom: 1.5rem;
-    font-family: "DM Sans", sans-serif;
-}
-
-.shop p {
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-    color: #555;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.product-card {
-    background: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.product-card h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-.product-card p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.product-card .btn-primary {
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    background-color: #0080c6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: not-allowed;
-    opacity: 0.7;
 }
 
 /* Ligging Zwembad */

@@ -55,42 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Modal-functionaliteit
-    const modal = document.getElementById("loginModal");
-    const loginButton = document.querySelector(".login-button");
-    const closeButton = document.querySelector(".close");
-    const registerLink = document.getElementById("registerLink");
-    const loginLink = document.getElementById("loginLink");
-    const loginForm = document.getElementById("loginForm");
-    const registerForm = document.getElementById("registerForm");
-
-    if (modal) {
-        loginButton?.addEventListener("click", () => {
-            modal.style.display = "flex";
-        });
-
-        closeButton?.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        window.addEventListener("click", (event) => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-
-        registerLink?.addEventListener("click", (e) => {
-            e.preventDefault();
-            loginForm.style.display = "none";
-            registerForm.style.display = "block";
-        });
-
-        loginLink?.addEventListener("click", (e) => {
-            e.preventDefault();
-            registerForm.style.display = "none";
-            loginForm.style.display = "block";
-        });
-    }
 
     // Cookie-banner functionaliteit
     const banner = document.getElementById("cookie-banner");
