@@ -11,7 +11,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Verberg horizontale scrollbalk */
+    overflow-x: hidden;
+    /* Verberg horizontale scrollbalk */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -28,7 +29,8 @@ body {
 
 .navbar {
     display: flex;
-    align-items: flex-end; /* Onderkant van logo en navigatie uitlijnen */
+    align-items: flex-end;
+    /* Onderkant van logo en navigatie uitlijnen */
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto -14px auto;
@@ -36,21 +38,25 @@ body {
 }
 
 .logo-image {
-    height: 90px; /* Consistente hoogte van het logo */
+    height: 90px;
+    /* Consistente hoogte van het logo */
     width: auto;
     flex-shrink: 0;
-    transform: translateY(-5px); /* Logo iets omhoog plaatsen */
+    transform: translateY(-5px);
+    /* Logo iets omhoog plaatsen */
 }
 
 
 .nav-links {
     display: flex;
-    gap: 15px; /* Meer ruimte tussen links */
+    gap: 15px;
+    /* Meer ruimte tussen links */
     list-style: none;
     font-size: large;
     margin: 0;
     padding: 0 0 4px 0;
-    align-items: flex-end; /* Onderkant uitlijnen van links binnen de navigatie */
+    align-items: flex-end;
+    /* Onderkant uitlijnen van links binnen de navigatie */
 }
 
 .nav-links a {
@@ -61,7 +67,8 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
     font-family: "DM Sans", sans-serif;
-    line-height: 1.2; /* Zorgt voor consistente hoogte */
+    line-height: 1.2;
+    /* Zorgt voor consistente hoogte */
 }
 
 .nav-links a:hover {
@@ -74,9 +81,11 @@ body {
 
 .nav-extras {
     display: flex;
-    align-items: center; /* Knoppen verticaal centreren */
+    align-items: center;
+    /* Knoppen verticaal centreren */
     gap: 20px;
 }
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -92,76 +101,112 @@ body {
 
 /* Missie Sectie */
 .missie {
-    padding: 1rem 1rem; /* Verminder de padding om de ruimte tussen inhoud en rand kleiner te maken */
-    background: linear-gradient(135deg, #f5f7fb, #e4e9f2); /* Gradient-achtergrond */
-    border: 1px solid #dfe3ea; /* Dunne rand */
-    border-radius: 16px; /* Meer afgeronde hoeken voor een modernere uitstraling */
-    margin: 3rem auto 8rem auto; /* Originele marge boven en onder */
-    max-width: 900px; /* Beperk de breedte voor betere leesbaarheid */
-    box-shadow: 0 8px 12px rgba(0, 128, 198, 0.15); /* Schaduw voor diepte */
-    text-align: left; /* Zorgt voor een nette uitlijning van de tekst */
-    font-family: Arial, sans-serif; /* Gebruik van een modern lettertype */
-    font-size: 1rem; /* Zorgt voor een leesbare tekstgrootte */
-    color: #333; /* Donkere kleur voor tekst */
-    line-height: 1.8; /* Verhoog de leesbaarheid door meer ruimte tussen regels */
+    padding: 1rem 1rem;
+    /* Verminder de padding om de ruimte tussen inhoud en rand kleiner te maken */
+    background: linear-gradient(135deg, #f5f7fb, #e4e9f2);
+    /* Gradient-achtergrond */
+    border: 1px solid #dfe3ea;
+    /* Dunne rand */
+    border-radius: 16px;
+    /* Meer afgeronde hoeken voor een modernere uitstraling */
+    margin: 3rem auto 8rem auto;
+    /* Originele marge boven en onder */
+    max-width: 900px;
+    /* Beperk de breedte voor betere leesbaarheid */
+    box-shadow: 0 8px 12px rgba(0, 128, 198, 0.15);
+    /* Schaduw voor diepte */
+    text-align: left;
+    /* Zorgt voor een nette uitlijning van de tekst */
+    font-family: Arial, sans-serif;
+    /* Gebruik van een modern lettertype */
+    font-size: 1rem;
+    /* Zorgt voor een leesbare tekstgrootte */
+    color: #333;
+    /* Donkere kleur voor tekst */
+    line-height: 1.8;
+    /* Verhoog de leesbaarheid door meer ruimte tussen regels */
     font-weight: 550;
 }
 
 
 .large-title {
-    font-size: 2rem; /* Maak de tekst groot */
-    font-weight: bold; /* Vetgedrukt */
-    line-height: 1.5; /* Ruimte tussen regels */
+    font-size: 2rem;
+    /* Maak de tekst groot */
+    font-weight: bold;
+    /* Vetgedrukt */
+    line-height: 1.5;
+    /* Ruimte tussen regels */
 }
 
 
 .missie p {
-    margin-top: 0.5rem; /* Kleinere marge boven de paragraaf om het in lijn te brengen met de afbeelding */
-    margin-bottom: 1rem; /* Ruimte onder de paragraaf */
+    margin-top: 0.5rem;
+    /* Kleinere marge boven de paragraaf om het in lijn te brengen met de afbeelding */
+    margin-bottom: 1rem;
+    /* Ruimte onder de paragraaf */
     letter-spacing: 0.5px;
 }
 
 .missie-content {
     display: flex;
-    flex-direction: column; /* Standaard alles onder elkaar */
+    flex-direction: column;
+    /* Standaard alles onder elkaar */
     align-items: center;
 }
 
 .missie-image img {
-    width: 100%; /* Zorgt ervoor dat de afbeelding de volledige breedte van de container inneemt */
-    max-width: 500px; /* Maximaliseer de breedte van de afbeelding */
-    height: auto; /* Houdt de verhoudingen van de afbeelding intact */
-    border-radius: 8px; /* Afgeronde hoeken voor de afbeelding */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw om de afbeelding te laten uitsteken */
+    width: 100%;
+    /* Zorgt ervoor dat de afbeelding de volledige breedte van de container inneemt */
+    max-width: 500px;
+    /* Maximaliseer de breedte van de afbeelding */
+    height: auto;
+    /* Houdt de verhoudingen van de afbeelding intact */
+    border-radius: 8px;
+    /* Afgeronde hoeken voor de afbeelding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtiele schaduw om de afbeelding te laten uitsteken */
 }
 
 .missie-text {
     width: 100%;
     display: flex;
-    flex-direction: column; /* Zorgt ervoor dat de tekst verticaal wordt uitgelijnd */
-    justify-content: center; /* Centreert de tekst verticaal ten opzichte van de afbeelding */
+    flex-direction: column;
+    /* Zorgt ervoor dat de tekst verticaal wordt uitgelijnd */
+    justify-content: center;
+    /* Centreert de tekst verticaal ten opzichte van de afbeelding */
     margin-top: 1.5rem;
 }
 
 
 .missie-text p {
-    font-size: 1.2rem; /* Grotere tekst voor de missie beschrijving */
-    color: #555; /* Donkere grijze kleur voor de paragraaf tekst */
-    line-height: 1.6; /* Ruimere regels voor betere leesbaarheid */
+    font-size: 1.2rem;
+    /* Grotere tekst voor de missie beschrijving */
+    color: #555;
+    /* Donkere grijze kleur voor de paragraaf tekst */
+    line-height: 1.6;
+    /* Ruimere regels voor betere leesbaarheid */
 }
 
 .missie-text h2 {
-    font-size: 2.5rem; /* Grote koptekst voor de missie tekst */
-    color: #0a154c; /* Donkere kleur voor de tekst */
-    margin-top: 0.5rem; /* Ruimte boven de koptekst om te zorgen dat het uitlijnt met de afbeelding */
-    margin-bottom: 1rem; /* Ruimte onder de koptekst */
-    font-family: "DM Sans", sans-serif; /* Lettertype voor de koptekst */
-    display: flex; /* Gebruik flexbox om de tekst in één lijn te krijgen */
-    align-items: center; /* Zorgt ervoor dat de tekst gecentreerd is verticaal */
+    font-size: 2.5rem;
+    /* Grote koptekst voor de missie tekst */
+    color: #0a154c;
+    /* Donkere kleur voor de tekst */
+    margin-top: 0.5rem;
+    /* Ruimte boven de koptekst om te zorgen dat het uitlijnt met de afbeelding */
+    margin-bottom: 1rem;
+    /* Ruimte onder de koptekst */
+    font-family: "DM Sans", sans-serif;
+    /* Lettertype voor de koptekst */
+    display: flex;
+    /* Gebruik flexbox om de tekst in één lijn te krijgen */
+    align-items: center;
+    /* Zorgt ervoor dat de tekst gecentreerd is verticaal */
 }
 
 .missie-text p span {
-    margin-right: 0.5rem; /* Ruimte tussen de woorden "de ultieme" en "training voor" */
+    margin-right: 0.5rem;
+    /* Ruimte tussen de woorden "de ultieme" en "training voor" */
 }
 
 
@@ -208,19 +253,23 @@ body {
 
 
     .about-info {
-        flex-direction: column; /* Zet items onder elkaar */
+        flex-direction: column;
+        /* Zet items onder elkaar */
     }
 
     .about-text {
-        width: 100%; /* Volledige breedte op kleinere schermen */
-        flex: 1 1 auto; /* Flexibel aanpassen */
+        width: 100%;
+        /* Volledige breedte op kleinere schermen */
+        flex: 1 1 auto;
+        /* Flexibel aanpassen */
     }
 }
 
 @media (max-width: 480px) {
 
     .about-text {
-        padding: 1.5rem; /* Verklein padding voor kleinere schermen */
+        padding: 1.5rem;
+        /* Verklein padding voor kleinere schermen */
     }
 }
 
@@ -248,7 +297,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.team h2{
+.team h2 {
     font-size: 2.5rem;
     color: #0a154c;
     margin: 3rem auto;
@@ -259,11 +308,15 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
+    /* Center horizontally with auto margins */
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     object-position: 80% 20%;
+    display: block;
+    /* Make it a block element so margin auto works */
 }
+
 
 .team-member p {
     font-size: 1rem;
@@ -287,9 +340,10 @@ body {
     line-height: 1.8;
 }
 
-@media (max-width: 768px)  {
-.story p {
-font-size: 1rem;}
+@media (max-width: 768px) {
+    .story p {
+        font-size: 1rem;
+    }
 }
 
 
@@ -299,7 +353,7 @@ font-size: 1rem;}
     padding: 4rem 0;
     background: #ffffff;
     text-align: center;
-    margin-bottom: 0 ;
+    margin-bottom: 0;
 }
 
 .community h1 {
@@ -317,22 +371,29 @@ font-size: 1rem;}
 
 /* Foto Galerij */
 .gallery {
-    display: flex; /* Flexbox in plaats van grid */
-    gap: 2.5rem; /* Houd de ruimte tussen items */
-    overflow-x: auto; /* Maak horizontaal scrollen mogelijk */
-    padding: 1rem 0; /* Extra padding voor een mooie lay-out */
-    scroll-snap-type: x mandatory; /* Zorgt voor vloeiend scrollen */
+    display: flex;
+    /* Flexbox in plaats van grid */
+    gap: 2.5rem;
+    /* Houd de ruimte tussen items */
+    overflow-x: auto;
+    /* Maak horizontaal scrollen mogelijk */
+    padding: 1rem 0;
+    /* Extra padding voor een mooie lay-out */
+    scroll-snap-type: x mandatory;
+    /* Zorgt voor vloeiend scrollen */
 }
 
 .gallery-item {
-    flex: 0 0 250px; /* Zorg dat elk item een vaste breedte heeft */
+    flex: 0 0 250px;
+    /* Zorg dat elk item een vaste breedte heeft */
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    scroll-snap-align: center; /* Snapt elk item naar het midden bij scrollen */
+    scroll-snap-align: center;
+    /* Snapt elk item naar het midden bij scrollen */
 }
 
 .gallery-item video {
@@ -369,7 +430,8 @@ font-size: 1rem;}
     background: #f9f9f9;
     text-align: center;
     margin-bottom: 0;
-    overflow-x: hidden; /* Verberg horizontale scroll indien nodig */
+    overflow-x: hidden;
+    /* Verberg horizontale scroll indien nodig */
 }
 
 .sponsors h2 {
@@ -382,14 +444,16 @@ font-size: 1rem;}
 
 .sponsor-logos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 logo's per rij */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 logo's per rij */
     gap: 2rem;
     justify-content: center;
     align-items: center;
 }
 
 .sponsor:nth-child(n+4) {
-    grid-column: auto; /* Laat de laatste twee naast elkaar */
+    grid-column: auto;
+    /* Laat de laatste twee naast elkaar */
 }
 
 
@@ -410,25 +474,30 @@ font-size: 1rem;}
 }
 
 .sponsor-logo {
-    height: 130px; /* Stel de vaste hoogte in */
-    width: auto; /* Breedte past zich aan op basis van de hoogte */
+    height: 130px;
+    /* Stel de vaste hoogte in */
+    width: auto;
+    /* Breedte past zich aan op basis van de hoogte */
     display: block;
     margin: 0 auto;
     padding: 0.5rem;
-    object-fit: contain; /* Zorgt ervoor dat het logo binnen de container blijft */
+    object-fit: contain;
+    /* Zorgt ervoor dat het logo binnen de container blijft */
 }
 
 
 /* Responsieve aanpassingen */
 @media (max-width: 1040px) {
     .sponsor-logos {
-        grid-template-columns: repeat(2, 1fr); /* 2 logo's per rij op tablets */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 logo's per rij op tablets */
     }
 }
 
 @media (max-width: 880px) {
     .sponsor-logos {
-        grid-template-columns: 1fr; /* 1 logo per rij op telefoons */
+        grid-template-columns: 1fr;
+        /* 1 logo per rij op telefoons */
     }
 }
 
@@ -443,7 +512,8 @@ font-size: 1rem;}
 }
 
 .hamburger-icon {
-    width: 24px; /* Pas aan naar wens */
+    width: 24px;
+    /* Pas aan naar wens */
     height: auto;
 }
 
@@ -498,8 +568,10 @@ font-size: 1rem;}
 
 
     .nav-links.active {
-        background: #0a154c; /* Zorgt voor een schermvullende achtergrondkleur */
-        transition: opacity 0.3s ease-in-out; /* Voeg een vloeiende overgang toe */
+        background: #0a154c;
+        /* Zorgt voor een schermvullende achtergrondkleur */
+        transition: opacity 0.3s ease-in-out;
+        /* Voeg een vloeiende overgang toe */
     }
 }
 
@@ -521,25 +593,33 @@ font-size: 1rem;}
     .nav-toggle {
         display: block;
 
-    }}
+    }
+}
 
 /* Responsiviteit */
 @media (min-width: 768px) {
     .missie-content {
-        display: flex; /* Flexbox-layout */
-        flex-direction: row; /* Zet tekst en afbeelding naast elkaar */
-        justify-content: space-between; /* Verspreid inhoud over de beschikbare ruimte */
-        gap: 2rem; /* Voeg ruimte toe tussen de elementen */
+        display: flex;
+        /* Flexbox-layout */
+        flex-direction: row;
+        /* Zet tekst en afbeelding naast elkaar */
+        justify-content: space-between;
+        /* Verspreid inhoud over de beschikbare ruimte */
+        gap: 2rem;
+        /* Voeg ruimte toe tussen de elementen */
     }
 
     .missie-text {
-        width: 50%; /* Tekst krijgt de helft van de breedte */
-        text-align: left; /* Tekst uitlijnen naar links */
+        width: 50%;
+        /* Tekst krijgt de helft van de breedte */
+        text-align: left;
+        /* Tekst uitlijnen naar links */
     }
 
 
     .missie-image {
-        width: 50%; /* Afbeelding krijgt de andere helft van de breedte */
+        width: 50%;
+        /* Afbeelding krijgt de andere helft van de breedte */
     }
 }
 
@@ -548,23 +628,34 @@ font-size: 1rem;}
     .large-title {
         margin-top: 1rem;
     }
+
     .missie-content {
-        display: flex; /* Zorg ervoor dat de flexbox actief blijft */
-        flex-direction: column-reverse; /* Afbeelding komt onder de tekst */
-        align-items: center; /* Gecentreerd uitlijnen */
-        text-align: center; /* Tekst centreren */
+        display: flex;
+        /* Zorg ervoor dat de flexbox actief blijft */
+        flex-direction: column-reverse;
+        /* Afbeelding komt onder de tekst */
+        align-items: center;
+        /* Gecentreerd uitlijnen */
+        text-align: center;
+        /* Tekst centreren */
     }
 
     .missie-text {
-        width: 100%; /* Tekst neemt volledige breedte */
-        text-align: center; /* Tekst centreren */
+        width: 100%;
+        /* Tekst neemt volledige breedte */
+        text-align: center;
+        /* Tekst centreren */
     }
 
     .missie-image img {
-        margin-top: 1.5rem; /* Extra ruimte tussen tekst en afbeelding */
-        width: 90%; /* Afbeelding schaalt naar 90% van de containerbreedte */
-        max-width: 500px; /* Maximaal 500px breed */
-        height: auto; /* Houdt verhoudingen intact */
+        margin-top: 1.5rem;
+        /* Extra ruimte tussen tekst en afbeelding */
+        width: 90%;
+        /* Afbeelding schaalt naar 90% van de containerbreedte */
+        max-width: 500px;
+        /* Maximaal 500px breed */
+        height: auto;
+        /* Houdt verhoudingen intact */
     }
 }
 
@@ -573,20 +664,26 @@ font-size: 1rem;}
     .large-title {
         margin-top: 10rem;
     }
+
     .missie-content {
-        flex-direction: column-reverse; /* Plaats afbeelding onder de tekst */
+        flex-direction: column-reverse;
+        /* Plaats afbeelding onder de tekst */
     }
-.missie {
-    padding-top: 0;
-}
+
+    .missie {
+        padding-top: 0;
+    }
+
     .missie-text {
         text-align: center;
     }
 
 
     .missie-image img {
-        margin-bottom: 1.5rem; /* Extra ruimte tussen tekst en afbeelding */
+        margin-bottom: 1.5rem;
+        /* Extra ruimte tussen tekst en afbeelding */
     }
+
     .logo-image {
         height: 5rem;
         width: auto;

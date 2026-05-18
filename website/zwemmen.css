@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .nav-links a.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -37,12 +38,7 @@ h2 {
 
 
 /* Sectie blokken */
-.section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
+.section {}
 
 .section div {
     background: #ffffff;
@@ -63,10 +59,14 @@ h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.2rem; /* Verhoogt de leesbaarheid */
-    line-height: 1.6; /* Maakt de tekst prettiger leesbaar */
-    margin-bottom: 1rem; /* Ruimte tussen de paragrafen */
-    color: #333; /* Neutrale donkere kleur */
+    font-size: 1.2rem;
+    /* Verhoogt de leesbaarheid */
+    line-height: 1.6;
+    /* Maakt de tekst prettiger leesbaar */
+    margin-bottom: 1rem;
+    /* Ruimte tussen de paragrafen */
+    color: #333;
+    /* Neutrale donkere kleur */
 }
 
 .schematekst2 {
@@ -117,145 +117,157 @@ p {
 
 .open-water-container .carousel-slide {
     flex: 0 0 auto;
-    width: 100%; /* Zorg ervoor dat de afbeeldingen de volledige breedte van de container gebruiken */
-    height: 100%; /* Zorg ervoor dat de afbeeldingen zich ook verticaal aanpassen */
+    width: 100%;
+    /* Zorg ervoor dat de afbeeldingen de volledige breedte van de container gebruiken */
+    height: 100%;
+    /* Zorg ervoor dat de afbeeldingen zich ook verticaal aanpassen */
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     scroll-snap-align: center;
 }
 
 .open-water-container .carousel-slide img {
-    width: 80%; /* Zorg ervoor dat de afbeelding de volledige breedte vult */
-    height: 80%; /* Zorg ervoor dat de afbeelding de volledige hoogte vult */
-    object-fit: cover; /* Zorg ervoor dat de afbeelding proportioneel wordt geschaald zonder vervorming */
+    width: 80%;
+    /* Zorg ervoor dat de afbeelding de volledige breedte vult */
+    height: 80%;
+    /* Zorg ervoor dat de afbeelding de volledige hoogte vult */
+    object-fit: cover;
+    /* Zorg ervoor dat de afbeelding proportioneel wordt geschaald zonder vervorming */
     border-radius: 8px
 }
+
 /* Media Query voor kleinere schermen */
 @media (max-width: 768px) {
     .open-water-container .open-water-content {
-        flex-direction: column; /* Zet de carousel onder de tekst */
-        align-items: center; /* Zorg ervoor dat de items gecentreerd zijn */
+        flex-direction: column;
+        /* Zet de carousel onder de tekst */
+        align-items: center;
+        /* Zorg ervoor dat de items gecentreerd zijn */
     }
 
     .open-water-container .open-water-carousel {
-        width: 100%; /* Laat de carousel de volledige breedte gebruiken */
-        margin-top: 2rem; /* Geef wat ruimte tussen de tekst en de carousel */
+        width: 100%;
+        /* Laat de carousel de volledige breedte gebruiken */
+        margin-top: 2rem;
+        /* Geef wat ruimte tussen de tekst en de carousel */
     }
 
     .open-water-container .carousel-slide {
-        width: 100%; /* Zorg ervoor dat de slides de volledige breedte van de container gebruiken */
+        width: 100%;
+        /* Zorg ervoor dat de slides de volledige breedte van de container gebruiken */
     }
 
-/* Footer algemene stijl */
-.footer {
-    background: #0a154c;
-    color: white;
-    padding: 3rem 0;
-    clear: both; /* Zorgt ervoor dat de footer altijd onder de secties komt */
-}
-
-/* Footer container met grid layout */
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Footer logo styling */
-.footer-logo {
-    text-align: center;
-}
-
-.footer-logo-image {
-    width: 220px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-.footer-logo p {
-    font-size: 1rem;
-    color: #aaa;
-}
-
-/* Footer link styling */
-.footer-links,
-.footer-socials,
-.footer-contact {
-    text-align: left;
-}
-
-.footer-links h4,
-.footer-socials h4,
-.footer-contact h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #fff;
-    font-family: "DM Sans", sans-serif;
-}
-
-.footer-links ul,
-.footer-socials ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li,
-.footer-socials ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-links ul li a,
-.footer-socials ul li a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover,
-.footer-socials ul li a:hover {
-    color: #fff;
-}
-
-/* Footer contact informatie */
-.footer-contact p {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-/* Footer onderaan */
-.footer-bottom {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    border-top: 1px solid #333;
-    margin-top: 2rem;
-    margin-bottom: -3rem;
-    color: #aaa;
-}
-
-
-
-
-/* Responsief voor mobiele schermen */
-@media (max-width: 768px) {
-    .section {
-        grid-template-columns: 1fr;
+    /* Footer algemene stijl */
+    .footer {
+        background: #0a154c;
+        color: white;
+        padding: 3rem 0;
+        clear: both;
+        /* Zorgt ervoor dat de footer altijd onder de secties komt */
     }
 
-    h2 {
-        font-size: 2.4rem;
+    /* Footer container met grid layout */
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
     }
 
-    h3 {
-        font-size: 1.8rem;
+    /* Footer logo styling */
+    .footer-logo {
+        text-align: center;
     }
 
-    p {
+    .footer-logo-image {
+        width: 220px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .footer-logo p {
         font-size: 1rem;
+        color: #aaa;
     }
-}}
 
+    /* Footer link styling */
+    .footer-links,
+    .footer-socials,
+    .footer-contact {
+        text-align: left;
+    }
+
+    .footer-links h4,
+    .footer-socials h4,
+    .footer-contact h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .footer-links ul,
+    .footer-socials ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li,
+    .footer-socials ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-links ul li a,
+    .footer-socials ul li a {
+        color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links ul li a:hover,
+    .footer-socials ul li a:hover {
+        color: #fff;
+    }
+
+    /* Footer contact informatie */
+    .footer-contact p {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+
+    /* Footer onderaan */
+    .footer-bottom {
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        border-top: 1px solid #333;
+        margin-top: 2rem;
+        margin-bottom: -3rem;
+        color: #aaa;
+    }
+
+
+
+
+    /* Responsief voor mobiele schermen */
+    @media (max-width: 768px) {
+        .section {
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
