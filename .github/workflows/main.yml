@@ -2,9 +2,9 @@ name: Build and publish
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, development ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main, development ]
 
 jobs:
   build:
@@ -50,12 +50,18 @@ jobs:
         sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
         sudo chmod +x /usr/local/bin/yq
 
-    - name: Update file in target repository
-      if: success()
+    - name: Update production deployment file
+      if: success() && github.ref == 'refs/heads/main'
       run: |
         cd target-repo
-        # Update the image tag in the deployment.yaml file
         yq eval '.spec.template.spec.containers[0].image = "nexus.gemas.synology.me/hosted/zvl:${{ github.sha }}"' -i deployments/zvl/deployment.yaml
+
+    - name: Update development deployment file
+      if: success() && github.ref == 'refs/heads/development'
+      run: |
+        cd target-repo
+        yq eval '.spec.template.spec.containers[0].image = "nexus.gemas.synology.me/hosted/zvl:${{ github.sha }}"' -i deployments/zvl-dev/deployment.yaml
+
 
     - name: Commit and push changes
       if: success()
