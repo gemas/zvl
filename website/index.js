@@ -1,27 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM volledig geladen');
 
-    // Hamburgermenu-functionaliteit
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
-
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !isExpanded);
-            navLinks.classList.toggle('active');
-            document.body.style.overflow = isExpanded ? '' : 'hidden'; // Scrollen in/uit
-        });
-
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                document.body.style.overflow = ''; // Scrollen herstellen
-            });
-        });
-    }
-
     // Carousel-functionaliteit
     const carousel = document.querySelector('.community-carousel');
     if (carousel) {

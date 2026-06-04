@@ -32,7 +32,8 @@ body {
 
 .navbar {
     display: flex;
-    align-items: flex-end; /* Onderkant van logo en navigatie uitlijnen */
+    align-items: flex-end;
+    /* Onderkant van logo en navigatie uitlijnen */
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto -14px auto;
@@ -40,21 +41,25 @@ body {
 }
 
 .logo-image {
-    height: 90px; /* Consistente hoogte van het logo */
+    height: 150px;
+    /* Consistente hoogte van het logo */
     width: auto;
     flex-shrink: 0;
-    transform: translateY(-5px); /* Logo iets omhoog plaatsen */
+    transform: translateY(-5px);
+    /* Logo iets omhoog plaatsen */
 }
 
 
 .nav-links {
     display: flex;
-    gap: 15px; /* Meer ruimte tussen links */
+    gap: 15px;
+    /* Meer ruimte tussen links */
     list-style: none;
     font-size: large;
     margin: 0;
     padding: 0 0 4px 0;
-    align-items: flex-end; /* Onderkant uitlijnen van links binnen de navigatie */
+    align-items: flex-end;
+    /* Onderkant uitlijnen van links binnen de navigatie */
 }
 
 .nav-links a {
@@ -65,7 +70,8 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
     font-family: "DM Sans", sans-serif;
-    line-height: 1.2; /* Zorgt voor consistente hoogte */
+    line-height: 1.2;
+    /* Zorgt voor consistente hoogte */
 }
 
 .nav-links a:hover {
@@ -78,7 +84,8 @@ body {
 
 .nav-extras {
     display: flex;
-    align-items: center; /* Knoppen verticaal centreren */
+    align-items: center;
+    /* Knoppen verticaal centreren */
     gap: 20px;
 }
 
@@ -111,30 +118,37 @@ body {
 
 /* Modal achtergrond */
 .modal {
-    display: none; /* Standaard verborgen */
+    display: none;
+    /* Standaard verborgen */
     position: fixed;
-    z-index: 9999; /* Zet modal boven alles */
+    z-index: 9999;
+    /* Zet modal boven alles */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 21, 76, 0.7); /* Donkere overlay */
-    backdrop-filter: blur(5px); /* Subtiele vervaging */
+    background-color: rgba(10, 21, 76, 0.7);
+    /* Donkere overlay */
+    backdrop-filter: blur(5px);
+    /* Subtiele vervaging */
     align-items: center;
     justify-content: center;
     padding: 20px;
-    pointer-events: all; /* Zorg dat modal interactief is */
+    pointer-events: all;
+    /* Zorg dat modal interactief is */
 }
 
 
 /* Modal inhoud */
 .modal-content {
-    background: linear-gradient(to bottom, #ffffff, #e0f3ff); /* Zachte gradient */
+    background: linear-gradient(to bottom, #ffffff, #e0f3ff);
+    /* Zachte gradient */
     padding: 20px 30px;
     border-radius: 12px;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Schaduw consistent met kaarten */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Schaduw consistent met kaarten */
     text-align: center;
     color: #0a154c;
     font-family: "DM Sans", sans-serif;
@@ -226,7 +240,8 @@ body {
     text-align: center;
     height: 70vh;
     padding: 40px 20px;
-    background: linear-gradient(to right, rgba(10, 21, 76, 0.7), rgba(0, 128, 198, 0.7)), url('Assets/pexels-pixabay-261403.jpg'); /* Gradiënt door de afbeelding heen */
+    background: linear-gradient(to right, rgba(10, 21, 76, 0.7), rgba(0, 128, 198, 0.7)), url('Assets/pexels-pixabay-261403.jpg');
+    /* Gradiënt door de afbeelding heen */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -237,7 +252,8 @@ body {
 /* Verwijder de overlay als je enkel een subtiele gradiënt wilt zonder extra verduistering */
 .hero .container {
     position: relative;
-    z-index: 2; /* Zorgt ervoor dat de tekst bovenop de afbeelding wordt weergegeven */
+    z-index: 2;
+    /* Zorgt ervoor dat de tekst bovenop de afbeelding wordt weergegeven */
 }
 
 .hero h1 {
@@ -277,8 +293,10 @@ body {
     border-radius: 5px;
     text-decoration: none;
     margin-top: 1rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Zachte overgang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Schaduw */
 }
 
 .btn-primary:hover {
@@ -300,7 +318,8 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: left;
     z-index: 9999;
-    display: none; /* Standaard verbergen */
+    display: none;
+    /* Standaard verbergen */
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -359,29 +378,39 @@ body {
 /* Aanpassingen voor schermbreedtes tussen 470px en 740px */
 @media (min-width: 470px) and (max-width: 740px) {
     .cookie-banner {
-        max-width: 85%; /* Zorg ervoor dat de banner niet te breed is */
-        padding: 15px; /* Behoud voldoende ruimte rondom de tekst */
+        max-width: 85%;
+        /* Zorg ervoor dat de banner niet te breed is */
+        padding: 15px;
+        /* Behoud voldoende ruimte rondom de tekst */
         gap: 15px;
     }
 
     .cookie-message {
-        text-align: center; /* Zorg dat de tekst gecentreerd is */
-        font-size: 0.95rem; /* Iets kleinere tekst om ruimte te besparen */
-        line-height: 1.4; /* Goede leesbaarheid */
+        text-align: center;
+        /* Zorg dat de tekst gecentreerd is */
+        font-size: 0.95rem;
+        /* Iets kleinere tekst om ruimte te besparen */
+        line-height: 1.4;
+        /* Goede leesbaarheid */
     }
 
     .cookie-actions {
-        justify-content: center; /* Knoppen netjes centreren */
-        gap: 10px; /* Minder ruimte tussen knoppen */
+        justify-content: center;
+        /* Knoppen netjes centreren */
+        gap: 10px;
+        /* Minder ruimte tussen knoppen */
     }
 
     .cookie-button {
-        font-size: 0.95rem; /* Knoptekst schaalbaar houden */
-        padding: 8px 12px; /* Minder padding voor consistentie */
+        font-size: 0.95rem;
+        /* Knoptekst schaalbaar houden */
+        padding: 8px 12px;
+        /* Minder padding voor consistentie */
     }
 
     .privacy-link {
-        font-size: 0.85rem; /* Link past beter bij de kleinere tekst */
+        font-size: 0.85rem;
+        /* Link past beter bij de kleinere tekst */
     }
 }
 
@@ -467,7 +496,7 @@ body {
 }
 
 .swimming-card {
-    background: #ffffff ;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
@@ -555,18 +584,29 @@ body {
 
 
 /* Secties */
-.about, .services, .community, .contact, .location {
-    background-color: #fff; /* Zorgt voor dezelfde achtergrondkleur */
-    margin-bottom: 40px; /* Zorgt voor consistentie in de ruimte tussen secties */
-    border-radius: 8px; /* Zorgt voor afgeronde hoeken */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Zelfde schaduw */
+.about,
+.services,
+.community,
+.contact,
+.location {
+    background-color: #fff;
+    /* Zorgt voor dezelfde achtergrondkleur */
+    margin-bottom: 40px;
+    /* Zorgt voor consistentie in de ruimte tussen secties */
+    border-radius: 8px;
+    /* Zorgt voor afgeronde hoeken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Zelfde schaduw */
 }
 
 .section-title {
     font-family: "DM Sans", sans-serif;
-    font-size: 2.5rem; /* Pas dit aan afhankelijk van de gewenste grootte */
-    color: #0a154c; /* Optioneel: kleurconsistentie met andere sectietitels */
-    text-align: center; /* Zorg ervoor dat het gecentreerd is */
+    font-size: 2.5rem;
+    /* Pas dit aan afhankelijk van de gewenste grootte */
+    color: #0a154c;
+    /* Optioneel: kleurconsistentie met andere sectietitels */
+    text-align: center;
+    /* Zorg ervoor dat het gecentreerd is */
     margin-bottom: 1.5rem;
 }
 
@@ -604,14 +644,18 @@ body {
 
 .community-carousel {
     display: flex;
-    justify-content: center; /* Zorg ervoor dat de items gecentreerd worden */
+    justify-content: center;
+    /* Zorg ervoor dat de items gecentreerd worden */
     gap: 1rem;
     padding: 1rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory; /* Zorg ervoor dat het scrolt naar het midden */
-    scroll-padding-left: 50%; /* Zorgt ervoor dat de eerste afbeelding naar het midden schuift */
-    scroll-padding-right: 50%; /* Zorg ervoor dat de laatste afbeelding ook in beeld is */
+    scroll-snap-type: x mandatory;
+    /* Zorg ervoor dat het scrolt naar het midden */
+    scroll-padding-left: 50%;
+    /* Zorgt ervoor dat de eerste afbeelding naar het midden schuift */
+    scroll-padding-right: 50%;
+    /* Zorg ervoor dat de laatste afbeelding ook in beeld is */
 }
 
 .carousel-item {
@@ -623,7 +667,8 @@ body {
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    scroll-snap-align: center; /* Zorg ervoor dat de afbeeldingen naar het midden 'snappen' */
+    scroll-snap-align: center;
+    /* Zorg ervoor dat de afbeeldingen naar het midden 'snappen' */
 }
 
 .community-image {
@@ -635,7 +680,9 @@ body {
 
 /* Mobile specific adjustments */
 @media (max-width: 768px) {
-    .section-title, .community h2 {
+
+    .section-title,
+    .community h2 {
         font-size: 2rem;
     }
 
@@ -655,9 +702,12 @@ body {
 
     .community-carousel {
         padding: 0 0.5rem;
-        scroll-padding-left: 0; /* Geen extra ruimte aan de linkerkant bij mobiele schermen */
-        scroll-padding-right: 0; /* Geen extra ruimte aan de rechterkant bij mobiele schermen */
-        justify-content: flex-start; /* Begin bij de eerste afbeelding */
+        scroll-padding-left: 0;
+        /* Geen extra ruimte aan de linkerkant bij mobiele schermen */
+        scroll-padding-right: 0;
+        /* Geen extra ruimte aan de rechterkant bij mobiele schermen */
+        justify-content: flex-start;
+        /* Begin bij de eerste afbeelding */
     }
 }
 
@@ -692,12 +742,18 @@ body {
 }
 
 .map-container iframe {
-    display: block; /* Verwijdert eventuele inline marges */
-    width: 100%; /* Zorgt ervoor dat de iframe de breedte van de container inneemt */
-    height: 400px; /* Stel een vaste hoogte in */
-    border: none; /* Verwijder de rand van het iframe */
-    margin: 0; /* Verwijder marges rondom het iframe */
-    padding: 0; /* Verwijder padding binnen het iframe */
+    display: block;
+    /* Verwijdert eventuele inline marges */
+    width: 100%;
+    /* Zorgt ervoor dat de iframe de breedte van de container inneemt */
+    height: 400px;
+    /* Stel een vaste hoogte in */
+    border: none;
+    /* Verwijder de rand van het iframe */
+    margin: 0;
+    /* Verwijder marges rondom het iframe */
+    padding: 0;
+    /* Verwijder padding binnen het iframe */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -832,7 +888,8 @@ body {
 }
 
 .hamburger-icon {
-    width: 24px; /* Pas aan naar wens */
+    width: 24px;
+    /* Pas aan naar wens */
     height: auto;
 }
 
@@ -887,8 +944,10 @@ body {
 
 
     .nav-links.active {
-        background: #0a154c; /* Zorgt voor een schermvullende achtergrondkleur */
-        transition: opacity 0.3s ease-in-out; /* Voeg een vloeiende overgang toe */
+        background: #0a154c;
+        /* Zorgt voor een schermvullende achtergrondkleur */
+        transition: opacity 0.3s ease-in-out;
+        /* Voeg een vloeiende overgang toe */
     }
 }
 
@@ -910,7 +969,8 @@ body {
     .nav-toggle {
         display: block;
 
-    }}
+    }
+}
 
 /* Extra stijlen voor responsiviteit en inhoud */
 .hero h1 {
