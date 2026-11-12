@@ -49,6 +49,43 @@ h2 {
 }
 
 
+/* Trainingstegel: tekst links, foto rechts */
+.section .training-tile {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.section .training-tile .training-text,
+.section .training-tile .training-image {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: none;
+}
+
+.section .training-tile .training-text {
+    flex: 2;
+}
+
+.section .training-tile .training-image {
+    flex: 1;
+}
+
+.training-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .section .training-tile {
+        flex-direction: column;
+    }
+}
+
 h3 {
     font-size: 2.2rem;
     color: #0a154c;
