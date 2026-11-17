@@ -3,7 +3,7 @@
 }
 .contact {
     padding: 60px 20px;
-    background: #f9f9f9;
+    background: #fff;
     color: #333;
     margin-bottom: 0 !important;
 }
@@ -32,43 +32,162 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.form-row .form-field {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .contact-form label {
     font-weight: bold;
 }
 
+.contact-form .req {
+    color: #c62828;
+}
+
+.contact-form .optional {
+    font-weight: normal;
+    color: #777;
+    font-size: 0.9em;
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     font-size: 1rem;
-}
-
-.contact-form input[type="tel"] {
     font-family: inherit;
     color: #333;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0080c6;
+    box-shadow: 0 0 0 3px rgba(0, 128, 198, 0.2);
+}
+
+.contact-form input.invalid,
+.contact-form textarea.invalid {
+    border-color: #c62828;
+}
+
+.contact-form input.invalid:focus,
+.contact-form textarea.invalid:focus {
+    box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.2);
+}
+
+.field-error {
+    margin: 0;
+    min-height: 0;
+    color: #c62828;
+    font-size: 0.9rem;
+}
+
+.field-error:empty {
+    display: none;
+}
+
+.form-hint {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Honeypot: verborgen voor mensen, zichtbaar voor bots */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
 }
 
 .contact-form button {
-    background-color: #0080c6; /* Primaire kleur */
-    color: white; /* Tekstkleur */
-    padding: 0.8rem 1.5rem; /* Ruimte rond de tekst */
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    background-color: #0080c6;
+    color: white;
+    padding: 0.8rem 2rem;
     font-size: 1rem;
-    font-weight: normal;
-    border-radius: 8px; /* Ronde hoeken */
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
-    border: none; /* Geen rand */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form button:hover {
-    background-color: #005fa3; /* Donkerdere kleur bij hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Vergroot de schaduw bij hover */
+.contact-form button:hover:not(:disabled) {
+    background-color: #005fa3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.contact-form button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
 
+@media (max-width: 600px) {
+    .contact-form button {
+        align-self: stretch;
+    }
+}
+
+.form-status {
+    padding: 14px 16px;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+.form-status.success {
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    color: #1b5e20;
+}
+
+.form-status.error {
+    background: #fdecea;
+    border: 1px solid #f5c2c0;
+    color: #8a1c1c;
+}
+
+.form-status a {
+    color: inherit;
+    font-weight: bold;
+}
